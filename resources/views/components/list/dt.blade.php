@@ -1,0 +1,1 @@
+<dt class="mb-2 w-1/2 flex items-center">{{ $slot }}</dt>

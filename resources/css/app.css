@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+th, td {
+    @apply p-2;
+}

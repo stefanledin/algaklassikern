@@ -1,0 +1,1 @@
+<dd class="mb-2 w-1/2 oswald font-normal text-4xl text-right">{{ $slot }}</dd>
