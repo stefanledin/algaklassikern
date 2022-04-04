@@ -19,14 +19,14 @@
         </x-card>
 
         <x-card class="col-span-full md:col-span-6">
-            <x-slot name="header">Nuvarande gren: Skidåkning</x-slot>
+            <x-slot name="header">Nuvarande gren: {{ $currentDiscipline->name }}</x-slot>
             <x-list.dl class="mb-6">
                 <x-list.dt>Mål:</x-list.dt>
                 <x-list.dd>90 km</x-list.dd>
                 <x-list.dt>Deadline:</x-list.dt>
-                <x-list.dd>2022-03-31</x-list.dd>
+                <x-list.dd>{{ $currentDiscipline->to_date }}</x-list.dd>
                 <x-list.dt>Dagar kvar:</x-list.dt>
-                <x-list.dd>{{ now()->diff('2022-03-31')->days }}</x-list.dd>
+                <x-list.dd>{{ now()->diff($currentDiscipline->to_date)->days }}</x-list.dd>
                 <x-list.dt>Distans kvar:</x-list.dt>
                 <x-list.dd>{{ $distanceRemaining / 1000 }} km</x-list.dd>
             </x-list.dl>

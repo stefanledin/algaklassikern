@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function() {
         return view('dashboard', [
             'user' => $user,
             'activities' => $activities,
+            'currentDiscipline' => Discipline::current(),
             'distanceRemaining' => Discipline::current()->distanceRemainingForUser($user),
         ]);
     })->name('dashboard');
