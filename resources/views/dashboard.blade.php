@@ -22,7 +22,7 @@
             <x-slot name="header">Nuvarande gren: {{ $currentDiscipline->name }}</x-slot>
             <x-list.dl class="mb-6">
                 <x-list.dt>Mål:</x-list.dt>
-                <x-list.dd>90 km</x-list.dd>
+                <x-list.dd>{{ $currentDiscipline->distance_to_complete / 1000 }} km</x-list.dd>
                 <x-list.dt>Deadline:</x-list.dt>
                 <x-list.dd>{{ $currentDiscipline->to_date }}</x-list.dd>
                 <x-list.dt>Dagar kvar:</x-list.dt>
