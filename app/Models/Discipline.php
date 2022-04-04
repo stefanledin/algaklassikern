@@ -27,8 +27,8 @@ class Discipline extends Model
         $today = now()->toDateString();
 
         return $query
-            ->where('from_date', '<=', $today)
-            ->where('to_date', '>=', $today)
+            ->whereDate('from_date', '<=', $today)
+            ->whereDate('to_date', '>=', $today)
             ->first();
     }
 
